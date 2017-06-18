@@ -1,0 +1,16 @@
+name: InfurePractice
+version: ${project.version}
+main: cc.infure.practice.InfurePractice
+authors: [matt11matthew]
+commands:
+  duel:
+  setspawn:
+  stats:
+  rankedmenu:
+  unrankedmenu:
+  elotop:
+  setuparena:
+  duelsreload:
+  confirmcreation:
+  dev:
+  setarenaspawnpoint:

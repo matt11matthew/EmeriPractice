@@ -1,0 +1,248 @@
+defaultElo: 1200
+arenaCountDownTime: 10 #10 seconds
+
+messages:
+  arenaCountDown: "&eStarting in {time}&ls&e..."
+  duelStart: "&eDuel Started"
+  gameEnded: "&eThe game {name} has ended!"
+  setSpawnPoint: "&eSet spawn point to {location}."
+  reloadConfig: "&eReloaded config."
+  startingSetUp: "&eStarting the setup."
+  positionNotSet: "&cError: Position {position} is not set."
+  createArena: "&eYou've created the arena!"
+  playerDoesNotExist: "&cThe player {name} doesn't exists."
+  setPosition: "&eSet position-{number} to &7({location})"
+  consoleHasNoStats: "&cConsole has no stats."
+  playerLeaveGame: "&c{player} left the game."
+  duelEnd: "&cThe duel has ended!"
+  kickMessage: "&eThe server is rebooting"
+  yourIngame: "&cYou cannot do that while ingame"
+  ingame: "&c{name} is already in a game."
+  noPendingRequest: "&cYou don't have a incoming duel request with {name}"
+  alreadyHavePendingRequest: "&cYou already have a pending duel request with {name}"
+  incomingDuelRequest: "&e{name} wants to duel you"
+  yesHoverMessage: "&aClick to accept duel"
+  yesText: "&a(accept)"
+  arenaCreateFail: "&cCorrect Usage: /createArena <name> <author>"
+  noHoverMessage: "&cClick to decline duel"
+  noText: "&c(decline)"
+  joinedQueue: "&cYou've joined the queue {game}"
+  leftQueue: "&cYou've left the queue {game}"
+  notEnoughWins: "&cYou don't have enough unranked wins you must have at least 10."
+  foundPlayer: "&eFound player {name} in {game} queue"
+  sentDuelRequest: "&eSent duel request to {name}"
+  declinedDuelRequest: "&eYou've declined the duel request from {name}"
+  declineDuelRequest: "&e{name} has declined the duel request from you"
+  acceptedDuelRequest: "&eAccepted the duel request from {name}"
+  acceptDuelRequest: "&e{name} has accepted the duel request"
+  eloTopAmount: 10
+  eloTopList:
+  - "&e&lElo Top"
+  - "&6{number}. &7{name} &6{elo} elo"
+  errorNoPermission: "&cYou don't have the permission {permission}"
+  rankedDuelWinnerMessages:
+  - "&8&m---------------------------------"
+  - "&6{winner} &7has won the duel"
+  - "&6{winner} &7had {winner_health} health left"
+  - "&6{loser} &7had {loser_health} health left"
+  - "&6{loser} &7{elo_loss}"
+  - "&6{winner} &7{elo_gain}"
+  - "&8&m---------------------------------"
+  unRankedDuelWinnerMessages:
+  - "&8&m---------------------------------"
+  - "&e{winner} has won the duel"
+  - "&e{winner} had {winner_health} health left"
+  - "&e{loser} had {loser_health} health left"
+  - "&8&m---------------------------------"
+  playerStats:
+  - "&8&m---------------------------------"
+  - "&eUsername: &b{name}"
+  - "&e&lElo"
+  - "  &eDebuff: &b{ranked_refill_elo}"
+  - "  &eNo Debuff: &b{ranked_no_debuff_potion_elo}"
+  - "&e&lDeaths"
+  - "  &eDebuff: &b{ranked_debuff_potion_deaths}"
+  - "  &eNo Debuff: &b{ranked_no_debuff_potion_deaths}"
+  - "&e&lKills"
+  - "  &eDebuff: &b{ranked_no_debuff_potion_kills}"
+  - "  &eNo Debuff: &b{ranked_no_debuff_potion_kills}"
+  - "&eCredits: &b{credits}"
+  - "&eTotal Kills: &b{total_kills}"
+  - "&eTotal Deaths: &b{total_deaths}"
+  - "&eTotal KDR: &b{total_kdr}"
+  - "&eGlobal Elo: &b{global_elo}"
+  - "&eRanked Wins: &b{ranked_wins}"
+  - "&eUnranked Wins: &b{unranked_wins}"
+  - "&8&m---------------------------------"
+
+permissions:
+  setSpawn: "duels.setSpawn"
+  reloadDuels: "duels.reload"
+  setArenaSpawnPoint: "duels.addArenaSpawnPoint"
+  setupArena: "duels.setup"
+
+
+joinMessageList:
+- " "
+- " "
+- " "
+- " "
+- " "
+- " "
+- " "
+- " "
+- " "
+- " "
+- "&8&m&l-------------------------------------------"
+- " "
+- "&fWelcome &b{player} to &7&lInfure Practice"
+- " "
+- "  &7Type &n/duel <playerName> &7 to duel a player"
+- "  &7Type &n/buy &7 to support the server"
+- " "
+- "&8&m&l-------------------------------------------"
+- " "
+
+spawnScoreboardTitle: "&b&lPractice"
+spawnScoreboardLines:
+- " "
+- "&bIGN: &f{ign}"
+- "&bElo: &f{global_elo}"
+- " "
+- "&binfure.cc"
+
+soupHealAmount: 0
+queueItemName: "&a{ladder}"
+queueItemLore:
+- "&3In Queue: &b{in_queue_amount}"
+- "&3In Game: &b{in_game_amount}"
+duelMenus:
+  UNRANKED_DEBUFF_POTION:
+    type: POTION
+    name: "&3Potion Debuff"
+    loreList:
+    - "&7Click to do unranked duel"
+  UNRANKED_NO_DEBUFF_POTION:
+    type: POTION
+    name: "&3Potion No Debuff"
+    loreList:
+    - "&7Click to do unranked duel"
+  UNRANKED_UHC_BUILD:
+    type: GOLDEN_APPLE
+    name: "&3Build UHC"
+    loreList:
+    - "&7Click to do unranked duel"
+  UNRANKED_MCSG:
+    type: STONE_SWORD
+    name: "&3MCSG"
+    loreList:
+    - "&7Click to do unranked duel"
+  UNRANKED_VANILLA:
+    type: DIAMOND_SWORD
+    name: "&3Vanilla"
+    loreList:
+    - "&7Click to do unranked duel"
+  RANKED_DEBUFF_POTION:
+    type: POTION
+    name: "&3Potion Debuff"
+    loreList:
+    - "&7Click to do ranked duel"
+  RANKED_NO_DEBUFF_POTION:
+    type: POTION
+    name: "&3Potion No Debuff"
+    loreList:
+    - "&7Click to do ranked duel"
+  RANKED_UHC_BUILD:
+    type: GOLDEN_APPLE
+    name: "&3Build UHC"
+    loreList:
+    - "&7Click to do ranked duel"
+  RANKED_MCSG:
+    type: STONE_SWORD
+    name: "&3MCSG"
+    loreList:
+    - "&7Click to do ranked duel"
+  RANKED_VANILLA:
+    type: DIAMOND_SWORD
+    name: "&3Vanilla"
+    loreList:
+    - "&7Click to do ranked duel"
+
+#    RANKED_DEBUFF_POTION,
+#        RANKED_NO_DEBUFF_POTION,
+#        RANKED_UHC_BUILD,
+#        RANKED_MCSG,
+#        RANKED_VANILLA,
+#
+#        UNRANKED_DEBUFF_POTION,
+#        UNRANKED_NO_DEBUFF_POTION,
+#        UNRANKED_UHC_BUILD,
+#        UNRANKED_MCSG,
+#        UNRANKED_VANILLA;
+
+kits:
+  RANKED_DEBUFF_POTION:
+    items: []
+    armor: []
+  RANKED_NO_DEBUFF_POTION:
+    items: []
+    armor: []
+  RANKED_UHC_BUILD:
+    items: []
+    armor: []
+  RANKED_MCSG:
+    items: []
+    armor: []
+  RANKED_VANILLA:
+    items: []
+    armor: []
+  UNRANKED_DEBUFF_POTION:
+    items: []
+    armor: []
+  UNRANKED_NO_DEBUFF_POTION:
+    items: []
+    armor: []
+  UNRANKED_UHC_BUILD:
+    items: []
+    armor: []
+  UNRANKED_MCSG:
+    items: []
+    armor: []
+  UNRANKED_VANILLA:
+    items: []
+    armor: []
+
+options:
+  RANKED_DEBUFF_POTION:
+    build: false
+    fastHittingSpeed: false
+  RANKED_NO_DEBUFF_POTION:
+    build: false
+    fastHittingSpeed: false
+  RANKED_UHC_BUILD:
+    build: true
+    fastHittingSpeed: false
+  RANKED_MCSG:
+    build: false
+    fastHittingSpeed: false
+  RANKED_VANILLA:
+    build: false
+    fastHittingSpeed: false
+  UNRANKED_DEBUFF_POTION:
+    build: false
+    fastHittingSpeed: false
+  UNRANKED_NO_DEBUFF_POTION:
+    build: false
+    fastHittingSpeed: false
+  UNRANKED_UHC_BUILD:
+    build: true
+    fastHittingSpeed: false
+  UNRANKED_MCSG:
+    build: false
+    fastHittingSpeed: false
+  UNRANKED_VANILLA:
+    build: false
+    fastHittingSpeed: false
+rankedSwordName: "&aRanked Queue"
+unRankedSwordName: "&aUnranked Queue"
+leaveQueueItemName: "&cLeave Queue"

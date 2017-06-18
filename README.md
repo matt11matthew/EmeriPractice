@@ -1,2 +1,1 @@
-# EmeriPractice
-EmeriPractice
+Practice
