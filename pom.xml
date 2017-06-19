@@ -44,8 +44,8 @@
                                     <include>org.apache.commons:commons-lang3</include>
                                 </includes>
                             </artifactSet>
-                            <finalName>InfurePractice</finalName>
-                            <outputFile>C:\Users\matt1\Desktop\SaucedMcBungee\hub\plugins\InfurePractice.jar</outputFile>
+                            <finalName>EmeriPractice</finalName>
+                            <outputFile>C:\Users\matt1\Desktop\SaucedMcBungee\hub\plugins\EmeriPractice.jar</outputFile>
                         </configuration>
                     </execution>
                 </executions>
@@ -75,8 +75,6 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.8-R0.1-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/spigot.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>

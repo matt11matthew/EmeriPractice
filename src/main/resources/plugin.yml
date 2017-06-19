@@ -1,6 +1,6 @@
-name: InfurePractice
+name: EmeriPractice
 version: ${project.version}
-main: cc.infure.practice.InfurePractice
+main: net.emeri.practice.EmeriPractice
 authors: [matt11matthew]
 commands:
   duel:
@@ -13,4 +13,5 @@ commands:
   duelsreload:
   confirmcreation:
   dev:
+  settingmenu:
   setarenaspawnpoint:
